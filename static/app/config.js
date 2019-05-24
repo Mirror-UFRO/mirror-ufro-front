@@ -139,23 +139,23 @@ var repohelp = {
 
 var repoconfig = {
   'archlinux': {
-    'logo': '@/archlinux.svg',
+    'logo': '@/archlinux.png',
     'name': 'Arch Linux',
     'link': 'https://www.archlinux.org/',
     'official': true
   },
   'centos': {
-    'logo': '@/centos.svg',
+    'logo': '@/centos.png',
     'name': 'CentOS',
     'link': 'https://www.centos.org/'
   },
   'debian': {
-    'logo': '@/debian.svg',
+    'logo': '@/debian.png',
     'name': 'Debian',
     'link': 'https://www.debian.org/'
   },
   'debian-cd': {
-    'logo': '@/debian.svg',
+    'logo': '@/debian.png',
     'name': 'Debian CD',
     'link': 'https://www.debian.org/distrib/'
   },
@@ -165,76 +165,76 @@ var repoconfig = {
     'link': 'https://fedoraproject.org/wiki/EPEL'
   },
   'fedora': {
-    'logo': '@/fedora.svg',
+    'logo': '@/fedora.png',
     'name': 'Fedora',
     'link': 'https://getfedora.org/'
   },
   'gentoo': {
-    'logo': '@/gentoo.svg',
+    'logo': '@/gentoo.png',
     'name': 'Gentoo',
     'link': 'https://www.gentoo.org/'
   },
   'ius': {
-    'logo': '@/ius.svg',
+    'logo': '@/ius.png',
     'name': 'IUS',
     'link': 'https://ius.io/'
   },
   'kali': {
-    'logo': '@/kali.svg',
+    'logo': '@/kali.png',
     'name': 'Kali Linux',
     'link': 'https://www.kali.org/',
     'official': true
   },
   'kali-images': {
-    'logo': '@/kali.svg',
+    'logo': '@/kali.png',
     'name': 'Kali CD',
     'link': 'https://www.kali.org/',
     'official': true
   },
   'linuxmint': {
-    'logo': '@/linuxmint.svg',
+    'logo': '@/linuxmint.png',
     'name': 'Linux Mint',
     'link': 'https://www.linuxmint.com/'
   },
   'linuxmint-cd': {
-    'logo': '@/linuxmint.svg',
+    'logo': '@/linuxmint.png',
     'name': 'Linux Mint CD',
     'link': 'https://www.linuxmint.com/download.php'
   },
   'manjaro': {
-    'logo': '@/manjaro.svg',
+    'logo': '@/manjaro.png',
     'name': 'Manjaro',
     'link': 'https://manjaro.org/',
     'official': true
   },
   'mariadb': {
-    'logo': '@/mariadb.svg',
+    'logo': '@/mariadb.png',
     'name': 'MariaDB',
     'link': 'https://mariadb.org/'
   },
   'opensuse': {
-    'logo': '@/opensuse.svg',
+    'logo': '@/opensuse.png',
     'name': 'openSUSE',
     'link': 'https://www.opensuse.org/'
   },
   'raspbian': {
-    'logo': '@/raspbian.svg',
+    'logo': '@/raspbian.png',
     'name': 'Raspbian',
     'link': 'https://www.raspberrypi.org/downloads/raspbian/',
     'official': true
   },
   'ubuntu': {
-    'logo': '@/ubuntu.svg',
+    'logo': '@/ubuntu.png',
     'name': 'Ubuntu',
     'link': 'https://www.ubuntu.com/'
   },
   'ubuntu-releases': {
-    'logo': '@/ubuntu.svg',
+    'logo': '@/ubuntu.png',
     'name': 'Ubuntu Releases',
     'link': 'http://releases.ubuntu.com/'
   },
   'ubuntu-cdimage': {
-    'logo': '@/ubuntu.svg',
+    'logo': '@/ubuntu.png',
     'name': 'Ubuntu CDi',
     'link': 'http://cdimage.ubuntu.com/'
   }
