@@ -1,124 +1,140 @@
 var repohelp = {
   archlinux: `
-Official mirror for Arch Linux, tier 2. Information available at: https://www.archlinux.org/mirrors/ufro.cl/.
+<p>
+  Official mirror for Arch Linux, tier 2. Information available
+  <a href="https://www.archlinux.org/mirrors/ufro.cl/">here</a>.
+<p>
+<p>Line for <code>mirrorlist</code> configuration file</p>
 
-Line for \`mirrorlist\` configuration file
-  
-\`\`\`Server = http://mirror.ufro.cl/archlinux/$repo/os/$arch\`\`\`
-	
-Get the latest ISOS from: https://mirror.ufro.cl/archlinux/iso/latest/`,
+<pre>Server = http://mirror.ufro.cl/archlinux/$repo/os/$arch</pre>
+<p>
+  Get the latest ISOS from
+  <a href="https://mirror.ufro.cl/archlinux/iso/latest/">here</a>.
+</p>`,
 
   // ---------------------
 
   centos: `
-Full CentOS mirror.
-
-CentOS 7 ISO files can be found at https://mirror.ufro.cl/centos/7/isos/x86_64/`,
+<p>Full CentOS mirror.</p>
+<p>
+  CentOS 7 x86_64 ISO files can be found
+  <a href="https://mirror.ufro.cl/centos/7/isos/x86_64/">here</a>.
+</p>`,
 
   // ---------------------
 
   debian: `
-Debian mirror for architectures: \`all amd64 arm64 armel armhf hurd-i386 i386 ia64 kfreebsd-amd64 kfreebsd-i386 mips mips64el powerpc ppc64el source\`.
-
-Deb lines for \`stretch\`:
-
+<p>
+  Debian mirror for all architectures.
+</p>
+<p>Deb lines for <code>stretch</code>:
+<pre>
     deb http://mirror.ufro.cl/debian/ stretch main contrib
     deb-src http://mirror.ufro.cl/debian/ stretch main contrib
-            
+
     deb http://mirror.ufro.cl/debian/ stretch-updates main contrib
     deb-src http://mirror.ufro.cl/debian/ stretch-updates main contrib
-            
+
     deb http://mirror.ufro.cl/debian stretch-backports main contrib
-    deb-src http://mirror.ufro.cl/debian stretch-backports main contrib`,
+    deb-src http://mirror.ufro.cl/debian stretch-backports main contrib
+</pre>`,
+
+// ---------------------
+
   'debian-cd': `
-Debian ISO files and releases stuff.
-
-Direct links:
-
-* [Directorio de ISOs live 9.5.0 amd64](https://mirror.ufro.cl/debian-cd/9.5.0-live/amd64/iso-hybrid/)
-* [ISO netinst 9.5.0 amd64](https://mirror.ufro.cl/debian-cd/9.5.0/amd64/iso-cd/debian-9.5.0-amd64-netinst.iso)  
-  SHA256: \`1f97a4b8dee7c3def5cd8215ff01b9edef27c901b28fa8b1ef4f022eff7c36c2\``,
+<p>Debian ISO files and releases stuff.</p>
+<p>Direct links:</p>
+<ul>
+  <li><a href="https://mirror.ufro.cl/debian-cd/current-live/amd64/iso-hybrid/">Live ISOs for amd64</a></li>
+  <li><a href="https://mirror.ufro.cl/debian-cd/9.5.0/amd64/iso-cd/">Netinst amd64 CD ISO</a></li>
+</ul>`,
 
   // ---------------------
 
   epel: `
-Fedora's Extra Packages for Enterprise Linux (EPEL) full mirror.`,
+<p>
+  Fedora's Extra Packages for Enterprise Linux (EPEL) full mirror.
+</p>`,
 
   // ---------------------
 
   fedora: `
-Fedora full mirror.
-
-Direct links:
-
-* [ISO 28 Workstation Live x86_64](https://mirror.ufro.cl/fedora/linux/releases/28/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-28-1.1.iso)  
-  SHA256: \`bd5c9ee34b7698eb0852a320da4fbdf616222a493d99f6054aa96afa96207bfb\`
-* [ISO 28 Workstation netinst x86_64](https://mirror.ufro.cl/fedora/linux/releases/28/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-28-1.1.iso)  
-  SHA256: \`34da8b46b23d786bb1d43a77a4dcd713c446fc70a4ace0c6f52e43b086350562\``,
+<p>Fedora full mirror.</p>
+<p>Direct links:</p>
+<ul>
+  <li><a href="https://mirror.ufro.cl/fedora/linux/releases/30/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-30-1.1.iso">ISO 30 Workstation Live x86_64</a></li>
+  <li><a href="https://mirror.ufro.cl/fedora/linux/releases/30/Workstation/x86_64/iso/Fedora-Workstation-netinst-x86_64-30-1.1.iso">ISO 30 Workstation netinst x86_64</a></li>
+</ul>`,
 
   // ---------------------
 
   ius: `
-IUS Community Project full mirror
-
-> **I**nline with **U**pstream **S**table`,
+<p>IUS Community Project full mirror</p>
+<blockquote><p><strong>I</strong>nline with <strong>U</strong>pstream <strong>S</strong>table</p></blockquote>`,
 
   // ---------------------
 
-  linuxmint: `Linux Mint full mirror.`,
+  linuxmint: `
+  <p>
+    Linux Mint full mirror.
+  </p>`,
 
   // ---------------------
 
   'linuxmint-cd': `
-Linux Mint releases (ISO files) full mirror.
-
-Linux Mint 19 Tara v2 (64bit) ISO files:
-
-* [Cinnamon](https://mirror.ufro.cl/linuxmint-cd/stable/19/linuxmint-19-cinnamon-64bit-v2.iso)  
-  SHA256: \`c92a9baafdd599da057a97236f0a853ce1f8b3c7ad41e652ceba493f9ca5623f\`
-* [Mate](https://mirror.ufro.cl/linuxmint-cd/stable/19/linuxmint-19-mate-64bit-v2.iso)  
-  SHA256: \`f8164654b7600ced1aa8ef6abee2e56620388b0baa161d7b17699f425223d7c7\`
-* [XFCE](https://mirror.ufro.cl/linuxmint-cd/stable/19/linuxmint-19-xfce-64bit-v2.iso)  
-  SHA256: \`c996a0de1e010476f36ed55322cb055b07d3bd507f0c60eff65b07634f20f897\``,
+<p>Linux Mint releases (ISO files) full mirror.</p>
+<p>Linux Mint 19.1 (64bit) ISO files direct links:</p>
+<ul>
+  <li><a href="https://mirror.ufro.cl/linuxmint-cd/stable/19.1/linuxmint-19.1-cinnamon-64bit.iso">Cinnamon</a></li>
+  <li><a href="https://mirror.ufro.cl/linuxmint-cd/stable/19.1/linuxmint-19.1-mate-64bit.iso">Mate</a></li>
+  <li><a href="https://mirror.ufro.cl/linuxmint-cd/stable/19.1/linuxmint-19.1-xfce-64bit.iso">XFCE</a></li>
+</ul>`,
 
   // ---------------------
 
-  manjaro: `Manjaro official full mirror. Check mirrors information at https://repo.manjaro.org/`,
+  manjaro: `<p>
+    Manjaro official full mirror. Check mirrors information at <a href="https://repo.manjaro.org/">https://repo.manjaro.org/</a>
+  </p>`,
 
   // ---------------------
 
-  raspbian: `Raspbian full mirror.`,
+  raspbian: `<p>Raspbian full mirror.</p>`,
 
   // ---------------------
 
-  ubuntu: `Ubuntu full archive mirror.`,
+  ubuntu: `<p>Ubuntu full archive mirror.</p>`,
 
   // ---------------------
 
   'ubuntu-releases': `
-Ubuntu releases (ISO files and stuff) full mirror.
-
-ISOs amd64:
-
-* [18.04 LTS desktop](https://mirror.ufro.cl/ubuntu-releases/18.04/ubuntu-18.04-desktop-amd64.iso)  
-  SHA256: \`a55353d837cbf7bc006cf49eeff05ae5044e757498e30643a9199b9a25bc9a34\`
-* [18.04 live server](https://mirror.ufro.cl/ubuntu-releases/18.04/ubuntu-18.04-live-server-amd64.iso)  
-  SHA256: \`7a1c2966f82268c14560386fbc467d58c3fbd2793f3b1f657baee609b80d39a8\``,
+<p>Ubuntu releases (ISO files and stuff) full mirror.</p>
+<p>ISOs amd64 direct links:</p>
+<ul>
+  <li><a href="https://mirror.ufro.cl/ubuntu-releases/18.04.2/ubuntu-18.04.2-desktop-amd64.iso">18.04.2 LTS desktop</a></li>
+  <li><a href="https://mirror.ufro.cl/ubuntu-releases/18.04.2/ubuntu-18.04.2-live-server-amd64.iso">18.04.2 LTS live server</a></li>
+</ul>
+`,
 
   // ---------------------
 
   'ubuntu-cdimage': `
-Ubuntu CDImage full mirror. Contains ISO files and more stuff about daily images and other Ubuntu derivates.`,
+<p>
+  Ubuntu CDImage full mirror. Contains ISO files and more stuff about daily images and other Ubuntu derivates.
+</p>`,
 
   // ---------------------
 
   'kali': `
-	Official Kali packages mirror, syncing from the main mirror server.`,
+	<p>
+    Official Kali packages mirror, syncing from the main mirror server.
+  </p>`,
 
   // ---------------------
 
   'kali-images': `
-	Official Kali images mirror, syncing from the main mirror server.`
+	<p>
+    Official Kali images mirror, syncing from the main mirror server.
+  </p>`
 };
 
 var repoconfig = {

@@ -22,8 +22,8 @@
 </nav>
 
 <div class="container d-flex mirror-list"></div>
-
 <div class="loading hidden">Loading...</div>
+
 <footer class="container">
   <hr>
   <div>
@@ -68,7 +68,7 @@
         <span title="Official mirror" class="mirror-official hidden">
           <img src="/static/img/official.svg" alt="official">
         </span>
-      </div>
+      </div><!-- /.mirror-title -->
 
       <div class="float-right mirror-header-icons">
         <a href="#" title="Explore repository files" target="_blank" class="mirror-browse-link">
@@ -77,8 +77,8 @@
         <a href="#" title="Show repository information" class="mirror-help">
           <img src="/static/img/help.svg" alt="help">
         </a>
-      </div>
-    </div><!-- /.card-header -->
+      </div><!-- /.mirror-header-icons -->
+    </div><!-- /.mirror-header -->
 
     <div class="mirror-body">
       <div class="d-flex">
@@ -93,13 +93,12 @@
         <div><img src="/static/img/status.svg" alt="updated" title="Status"> Status: </div>
         <div class="text-right ml-auto mirror-status"></div>
       </div>
-    </div>
+    </div><!-- /.mirror-body -->
   </div>
 </template>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.2/markdown-it.min.js"></script>
-<script src="/static/app/config.js?v=1"></script>
-<script src="/static/app/app.js?v=1"></script>
+<script src="/static/app/config.js?v=2"></script>
+<script src="/static/app/app.js?v=2"></script>
 
 </body>
 </html>

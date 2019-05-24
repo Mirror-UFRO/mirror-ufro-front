@@ -1,12 +1,12 @@
 (function(d, w){
     'use strict';
 
+    // Basic element selector
     function q(sel, c) {
         let x = (c || d).querySelectorAll(sel);
         return x.length === 1 ? x[0] : x;
     }
 
-    const md = markdownit({ linkify: true });
     const helpModal = q('.modal');
     const mirrorContainer = q('.mirror-list');
 
@@ -145,9 +145,8 @@
             return;
         }
 
-        console.log(mirror);
         q('.modal-mirror-name', helpModal).innerText = mirror.name;
-        q('.modal-mirror-details', helpModal).innerHTML = md.render(mirror.details);
+        q('.modal-mirror-details', helpModal).innerHTML = mirror.details;
         toggleModal();
     }
 
