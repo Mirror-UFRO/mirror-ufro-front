@@ -65,9 +65,10 @@ nav span img { /* Usage icon */
 .mirror-card {
     display: inline-block;
     background-color: #fff;
-    width: 100%;
+    min-width: 96%;
     margin: 0.5rem;
     border-radius: 3px;
+    flex: 1;
 }
 .mirror-header {
     padding: .75rem 1rem;
@@ -205,16 +206,16 @@ body.has-modal .modal {
 }
 @media (min-width: 576px) {
     .container { max-width: 540px; }
-    .mirror-card { width: 45%; }
+    .mirror-card { min-width: 45%; }
 }
 @media (min-width: 768px) {
     .container { max-width: 720px; }
 }
 @media (min-width: 992px) {
     .container { max-width: 960px; }
-    .mirror-card { width: 30%; }
+    .mirror-card { min-width: 30%; }
 }
 @media (min-width: 1200px) {
     .container { max-width: 1140px; }
-    .mirror-card { width: 23%; }
+    .mirror-card { min-width: 23%; }
 }

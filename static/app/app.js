@@ -115,7 +115,7 @@
         q('.mirror-browse-link', tpl).href = mirror.folderLink;
         q('.mirror-last-update', tpl).innerText = relatime(mirror.lastUpdate) + ' ago';
         q('.mirror-status', tpl).innerText = mirror.status;
-        q('.mirror-link', tpl).src = mirror.link;
+        q('.mirror-link', tpl).href = mirror.link;
         q('.mirror-link', tpl).title =
             q('.mirror-link', tpl).title.replace('mirrorname', mirror.name);
 
