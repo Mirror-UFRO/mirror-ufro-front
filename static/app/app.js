@@ -9,22 +9,35 @@
 
     const helpModal = q('.modal');
     const mirrorContainer = q('.mirror-list');
+    let repoconfig = null;
+    let config = null;
+    let loaded = false;
 
-    getStatus(function(err, data) {
+    w.setConfig = function(config) {
+        repoconfig = config;
+        load();
+    };
+
+    w.setMirrors = function(mirrorConfig) {
+        config = mirrorConfig;
+        load();
+    };
+
+    function load() {
         q('.loading').classList.add('hidden');
-        if (err) {
-            console.error(err);
+
+        if (!(repoconfig && config) || loaded) {
             return;
         }
-
-        if (!data.hasOwnProperty('mirrors')) {
+        
+        if (!config.hasOwnProperty('mirrors')) {
             alert('Mirrors cound not be retrieved!');
             return [];
         }
 
         // Check settings available for each mirror
-        for (let repo in data.mirrors) {
-            if (!data.mirrors.hasOwnProperty(repo)) {
+        for (let repo in config.mirrors) {
+            if (!config.mirrors.hasOwnProperty(repo)) {
                 continue;
             }
 
@@ -35,37 +48,23 @@
             }
 
             // Parse and filter mirror data
-            parseMirror(data.mirrors[repo], repo);
-            renderMirror(data.mirrors[repo]);
+            parseMirror(config.mirrors[repo], repo);
+            renderMirror(config.mirrors[repo]);
         }
 
-        if (data.hasOwnProperty('disk')) {
+        if (config.hasOwnProperty('disk')) {
             q('#usage span').innerHTML =
-                `${data.disk.usedHuman} / ${data.disk.totalHuman} (free: ${data.disk.freeHuman})`;
+                `${config.disk.usedHuman} / ${config.disk.totalHuman} (free: ${config.disk.freeHuman})`;
             q('#usage').classList.remove('hidden');
         }
 
-        q('.mirror-generated span').innerText = data._ms.toFixed(4);
+        q('.mirror-generated span').innerText = config._ms.toFixed(4);
         q('.mirror-generated').classList.remove('hidden');
         q('.modal-close-cross').onclick = toggleModal;
         q('.modal-close-btn').onclick = toggleModal;
 
-        console.log(data);
-    });
-
-    function getStatus(callback) {
-        q('.loading').classList.remove('hidden');
-
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://mirror.ufro.cl/status');
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                callback(null, JSON.parse(xhr.responseText));
-            } else {
-                callback(new Error(xhr.status));
-            }
-        };
-        xhr.send();
+        console.log(config);
+        loaded = true;
     }
 
     function parseMirror(mirror, name) {
