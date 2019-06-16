@@ -36,21 +36,22 @@
         }
 
         // Check settings available for each mirror
-        for (let repo in config.mirrors) {
+        let repos = Object.keys(config.mirrors).sort();
+        repos.forEach(repo => {
             if (!config.mirrors.hasOwnProperty(repo)) {
-                continue;
+                return;
             }
 
             // Hide repos that aren't on the config
             if (!repoconfig.hasOwnProperty(repo)) {
                 delete data.mirrors[repo];
-                continue;
+                return;
             }
 
             // Parse and filter mirror data
             parseMirror(config.mirrors[repo], repo);
             renderMirror(config.mirrors[repo]);
-        }
+        });
 
         if (config.hasOwnProperty('disk')) {
             q('#usage span').innerHTML =
