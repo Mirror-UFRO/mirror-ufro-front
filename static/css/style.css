@@ -204,18 +204,75 @@ body.has-modal .modal {
     margin-left: auto;
     margin-right: auto;
 }
+
+.mirror-list.list .d-flex {
+    display: inherit;
+}
+
+.mirror-list.list .mirror-card {
+    position: relative;
+}
+
+.mirror-list.list .mirror-header {
+    border-bottom: 0;
+    background: transparent;
+    display: inline-block;
+    width: 30%;
+}
+
+.mirror-list.list .mirror-title {
+    display: inline-block;
+}
+
+.mirror-list.list .mirror-name,
+.mirror-list.list .mirror-official {
+    position: relative;
+    top: 3px;
+}
+
+.mirror-list.list .mirror-header-icons {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
+
+.mirror-list.list .mirror-body,
+.mirror-list.list .mirror-body .d-flex,
+.mirror-list.list .mirror-body .d-flex div:first-of-type,
+.mirror-list.list .mirror-body .d-flex .ml-auto {
+    display: inline-block;
+}
+
+.mirror-list.list .mirror-body {
+    width: 60%;
+    padding: 0.5rem;
+}
+
+.mirror-list.list .mirror-body > .d-flex {
+    width: 30%;
+}
+
+.mirror-list.list .mirror-body .d-flex div:first-of-type span {
+    display: none;
+}
+
+.mirror-list.list .mirror-body .d-flex .ml-auto {
+    position: relative;
+    top: 1px;
+}
+
 @media (min-width: 576px) {
     .container { max-width: 540px; }
-    .mirror-card { min-width: 45%; }
+    .mirror-list:not(.list) .mirror-card { min-width: 45%; }
 }
 @media (min-width: 768px) {
     .container { max-width: 720px; }
 }
 @media (min-width: 992px) {
     .container { max-width: 960px; }
-    .mirror-card { min-width: 30%; }
+    .mirror-list:not(.list) .mirror-card { min-width: 30%; }
 }
 @media (min-width: 1200px) {
     .container { max-width: 1140px; }
-    .mirror-card { min-width: 23%; }
+    .mirror-list:not(.list) .mirror-card { min-width: 23%; }
 }
