@@ -274,5 +274,8 @@ body.has-modal .modal {
 }
 @media (min-width: 1200px) {
     .container { max-width: 1140px; }
-    .mirror-list:not(.list) .mirror-card { min-width: 23%; }
+    .mirror-list:not(.list) .mirror-card { 
+        min-width: 23%;
+        max-width: 48.64%;
+    }
 }
